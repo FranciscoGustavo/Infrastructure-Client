@@ -1,0 +1,76 @@
+:root {
+    --primary-dark: #6a0080;
+    --primary-light: #d05ce3;
+    --primary: #9c27b0;
+    --secondary-dark: #087f23;
+    --secondary-light: #80e27e;
+    --secondary: #4caf50;
+    --white: #FFF;
+    --black: #000;
+}
+
+.row {
+    margin: auto;
+    margin-bottom: 1.25rem;
+    
+}
+
+.col {
+    padding: 0 .75rem;
+    min-height: 1px;
+}
+
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-field input, .input-field textarea {    
+    width: 100%;
+    height: 3rem;
+
+    margin: 0 0 1.5rem 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #9e9e9e;
+    padding: 0;
+
+    background-color: transparent;
+    outline: none;
+
+    font-size: 1rem;
+}
+
+.input-field textarea {
+    padding: 0.8rem 0;
+}
+
+.input-field label {
+    position: absolute;
+    top: 0;
+    left: .75rem;
+
+    font-size: 1rem;
+    text-align: initial;
+    color: #9e9e9e;
+    cursor: text;
+
+    transition: transform .2s ease-out, color .2s ease-out;
+
+    transform-origin: 0% 100%;
+    transform: translateY(12px);
+  
+}
+
+.input-field input:focus, .input-field input:active, .input-field input.non-empty,
+.input-field textarea:focus, .input-field textarea:active {
+    border-bottom: 1px solid var(--secondary);
+}
+
+.input-field input:focus + label, .input-field input:active + label, .input-field input.non-empty + label,
+.input-field textarea:focus + label, .input-field textarea:active + label {
+    transform: translateY(-14px) scale(0.8);
+    transform-origin: 0 0;
+    color: var(--secondary);
+  }
