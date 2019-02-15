@@ -33,7 +33,7 @@ class App extends Component {
         <Sidenav toggleSideNav={this.toggleSideNav}/>
         <div className="sidenav-overlay" onClick={this.toggleSideNav}></div>
         <TransitionGroup className="content">
-          <CSSTransition key={this.props.location.pathname.split('/')[1]} timeout={5000} classNames='star'>
+          <CSSTransition key={this.props.location.key} timeout={300} classNames='star'>
             {this.props.children}
           </CSSTransition>
         </TransitionGroup>

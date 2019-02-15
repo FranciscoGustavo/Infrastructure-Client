@@ -64,7 +64,7 @@ button {
 /*
  * Text Button and Outline Button
 */ 
-.btn-text, .btn-outline, .bnt-flat {
+.btn-text, .btn-outline, .btn-flat {
     color: var(--primary);
 }
 

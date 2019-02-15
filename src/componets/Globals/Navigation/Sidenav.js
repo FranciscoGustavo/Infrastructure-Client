@@ -20,6 +20,12 @@ const Sidenav = function (props) {
             <li onClick={props.toggleSideNav}>
                 <Link to="/categories">Categorias</Link>
             </li>
+            <li onClick={props.toggleSideNav}>
+                <Link to="/clients">Clientes</Link>
+            </li>
+            <li onClick={props.toggleSideNav}>
+                <Link to="/orders">Pedidos</Link>
+            </li>
         </Menu>
     )
 }
