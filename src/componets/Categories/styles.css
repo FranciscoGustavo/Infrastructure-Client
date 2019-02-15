@@ -1,0 +1,58 @@
+/*table {
+    text-align: left;
+}
+*/
+th, td {
+    padding: 1rem;
+}
+
+tr {
+    border-bottom: solid 1px #AAA;
+}
+
+tbody tr:last-child {
+    border-bottom: 0;
+}
+
+.header h1, .header .breadcrumbs, .header .add {
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    border: solid 1px #AAA;
+    border-radius: 3px;    
+}
+
+.table thead {
+    background-color: var(--primary-dark);
+    color: #FFF;
+}
+
+.table tbody {
+    color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #DDD;
+}
+
+.table tbody img { max-width: 100px; }
+
+.table {
+    width: 100%;
+}
+
+.buttons-grup {
+
+}
+
+.edit-and-delete button:first-child {
+    background-color: #E08E0B;
+    color : #FFF;
+
+}
+
+.edit-and-delete button:last-child {
+    background-color: #DD4B39;
+    color: #FFF;
+}
