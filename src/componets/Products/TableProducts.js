@@ -1,22 +1,26 @@
 import React from 'react';
-import './styles.css';
 
 const TableProducts = props => (
-    <div className="table-products">
-        <header>
-            <div className="row">
-                <div className="col-2 col i-b v-middle">Title</div>
-                <div className="col-3 col i-b v-middle">Description</div>
-                <div className="col-2 col i-b v-middle">Cate    gory</div>
-                <div className="col-1 col i-b v-middle">Unity</div>
-                <div className="col-1 col i-b v-middle">Price</div>
-                <div className="actions col-2 col i-b v-middle">Acciones</div>
-            </div>
-        </header>
-        <main>
-            {props.children}
-        </main>
-    </div>
+    <div className="table-container">
+        <table className="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Imagen</th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Categoria</th>
+                <th>Unidad</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                {props.children}
+            </tbody>
+        </table>
+    </div> 
 )
 
 export default TableProducts

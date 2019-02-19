@@ -15,6 +15,7 @@ import Dashboard from './componets/Dashboard'
 
 import Products from './componets/Products'
 import NewProduct from './componets/Products/New'
+import EditProduct from './componets/Products/Edit'
 
 import Categories from './componets/Categories'
 import NewCategory from './componets/Categories/New'
@@ -36,11 +37,16 @@ class Router extends Component {
             <App>
               <Switch location={this.props.location}>
                 <Route exact path="/" component={Dashboard}></Route>
+
                 <Route exact path="/products" component={Products}></Route>
                 <Route exact path="/products/new" component={NewProduct}></Route>
+                <Route exact path="/products/edit/:slug" component={EditProduct}></Route>
+
                 <Route exact path="/categories" component={Categories}></Route>
                 <Route exact path="/categories/new" component={NewCategory}></Route>
+
                 <Route exact path="/clients" component={Clients}></Route>
+
                 <Route exact path="/orders" component={Orders}></Route>
               </Switch>
               </App>

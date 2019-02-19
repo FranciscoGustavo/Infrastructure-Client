@@ -1,17 +1,25 @@
 import React from 'react'
-import { RisedButton, TextButton } from '../MaterialDesing/Buttons'
 
 const ClientRow = props => (
-    <div className="row">
-        <div className="col-3 col i-b v-middle">{props.cl.name}</div>
-        <div className="actions col-3 col i-b v-middle">{props.cl.email}</div>
-        <div className="actions col-3 col i-b v-middle">{props.cl.address}</div>
-        <div className="col-3 col i-b v-middle">
-            <RisedButton label="Editar"/>
-            <TextButton label="Eliminar"/>   
-        </div>
-    </div>
-    
+    <tr>
+        <td>{}</td>
+        <td>
+            <img src={props.client.photo} alt=""/>
+        </td>
+        <td>{props.client.name}</td>
+        <td>{props.client.email}</td>
+        <td>{props.client.address}</td>
+        <td>
+            <div className="buttons-grup edit-and-delete">
+                <button className="btn btn-flat" client={props.client._id} onClick={props.openModal}>
+                    <i className="material-icons">edit</i>
+                </button>
+                <button className="btn btn-flat">
+                    <i className="material-icons">delete</i>
+                </button>  
+            </div>
+        </td>
+    </tr>
 )
 
 export default ClientRow

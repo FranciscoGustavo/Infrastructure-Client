@@ -1,5 +1,5 @@
 function createSession (data) {
-    return fetch('http://localhost:8080/sessions',{
+    return fetch('http://localhost:8080/sessions/users',{
         method : 'POST',
         body : JSON.stringify(data),
         headers : {

@@ -1,7 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Modal from 'react-modal';
+//import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
 
 import * as actions from '../../actions/productsActions';
@@ -23,36 +23,12 @@ class Products extends Component {
 
     load () {
         this.props.dispatch(actions.loadAll())
-        //console.log(this.props)
     }
 
     showProducts () {
-        //console.log(this.props)
         if(this.props.products.docs){
             return this.props.products.docs.map((product, index) => {
-                return (
-                    <tr key={index}>
-                        <td>{index+1}</td>
-                        <td>
-                            <img src={product.avatarImage} alt=""/>
-                        </td>
-                        <td>{product.title}</td>
-                        <td>{product.description}</td>
-                        <td>{product._category.title}</td>
-                        <td>{product.unity}</td>
-                        <td>{'$ '+product.price}</td>
-                        <td>
-                            <div className="buttons-grup edit-and-delete">
-                                <button className="btn btn-flat">
-                                    <i className="material-icons">edit</i>
-                                </button>
-                                <button className="btn btn-flat">
-                                    <i className="material-icons">delete</i>
-                                </button>  
-                            </div>
-                        </td>
-                    </tr>
-                )
+                return <ProductRow key={index} pd={product}/>
             })
         }
         
@@ -83,27 +59,11 @@ class Products extends Component {
                         </Link>
                     </div>
                 </header>
-                               
-                <div className="table-container">
-                    <table className="table">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Imagen</th>
-                            <th>Titulo</th>
-                            <th>Descripcion</th>
-                            <th>Categoria</th>
-                            <th>Unidad</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
 
-                        <tbody>
-                            {this.showProducts()}
-                        </tbody>
-                    </table>
-                </div>                              
+                <TableProducts>
+                    {this.showProducts()}
+                </TableProducts>
+
             </div>
         );
     }

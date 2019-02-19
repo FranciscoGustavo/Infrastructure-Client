@@ -1,21 +1,28 @@
 import React from 'react'
-import { RisedButton, TextButton } from '../MaterialDesing/Buttons'
+import { Link } from 'react-router-dom' 
 
 const ProductRow = props => (
-    <div className="row">
-        <div className="col-2 col i-b v-middle">{props.pd.title}</div>
-        <div className="col-3 col i-b v-middle">{props.pd.description}</div>
-        <div className="col-2 col i-b v-middle">{props.pd._category.title}</div>
-        <div className="col-1 col i-b v-middle">{props.pd.unity}</div>
-        <div className="col-1 col i-b v-middle">{props.pd.price}</div>
-        <div className="col-1 col i-b v-middle">
-<RisedButton label="Editar"/>
-        </div>
-        <div className="col-1 col i-b v-middle">
-<TextButton label="Eliminar"/>   
-</div>
-    </div>
-    
+    <tr>
+        <td></td>
+        <td>
+            <img src={props.pd.avatarImage} alt=""/>
+        </td>
+        <td>{props.pd.title}</td>
+        <td>{props.pd.description}</td>
+        <td>{props.pd._category.title}</td>
+        <td>{props.pd.unity}</td>
+        <td>{'$ '+props.pd.price}</td>
+        <td>
+            <div className="buttons-grup edit-and-delete">
+                <Link className="btn btn-flat" to={"/products/edit/" + props.pd.slug}>
+                    <i className="material-icons">edit</i>
+                </Link>
+                <button className="btn btn-flat">
+                    <i className="material-icons">delete</i>
+                </button>  
+            </div>
+        </td>
+    </tr>
 )
 
 export default ProductRow

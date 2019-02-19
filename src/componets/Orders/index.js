@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import * as actions from '../../actions/ordersActions'
-import TableOrders from './TableOrders'
-import OrderRow from './OrderRow'
+//import TableOrders from './TableOrders'
+//import OrderRow from './OrderRow'
 
 class Orders extends Component {
     constructor(props){

@@ -101,3 +101,43 @@ button.btn-icon i, .btn-icon i {
   transform: translateX(0);
   transition: all 150ms;
 }
+
+.product-form > div {
+  vertical-align: top;
+}
+
+.product-form .avatar-image {
+  width: 400px;
+  border-radius: 0;
+}
+
+.product-form .avatar label {
+  position: static;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  margin: 1rem auto;
+  height: auto;
+}
+
+.product-form .avatar label i {
+  font-size: 1.3rem;
+}
+
+.s6 {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.s8 {
+  width: 66.666666666666666666666666666667%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.s4 {
+  width: 33.333333333333333333333333333333%;
+  display: inline-block;
+  vertical-align: middle;
+}

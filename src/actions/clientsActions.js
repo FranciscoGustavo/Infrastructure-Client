@@ -7,7 +7,7 @@ function loadClients(clients){
 export function loadAll(){
     return (dispatch, getState) => {
         requests.getClients().then(result => {
-            console.log(result)
+            //console.log(result)
             dispatch(loadClients(result))
         })
     }
